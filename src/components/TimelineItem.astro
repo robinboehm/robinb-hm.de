@@ -1,0 +1,165 @@
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  entry: CollectionEntry<'timeline'>;
+  index: number;
+}
+
+const { entry, index } = Astro.props;
+const { data, slug } = entry;
+
+// Type icons mapping
+const typeIcons = {
+  work: '💼',
+  project: '🚀', 
+  education: '🎓',
+  achievement: '🏆',
+  personal: '🌟'
+};
+
+const typeColors = {
+  work: 'border-blue-500 bg-blue-500/10',
+  project: 'border-purple-500 bg-purple-500/10',
+  education: 'border-green-500 bg-green-500/10', 
+  achievement: 'border-yellow-500 bg-yellow-500/10',
+  personal: 'border-pink-500 bg-pink-500/10'
+};
+
+const isLeft = index % 2 === 0;
+
+<div 
+  class={`timeline-item flex items-center mb-16 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
+  data-index={index}
+>
+  <!-- Content Card -->
+  <div class={`timeline-card w-5/12 ${isLeft ? 'mr-8' : 'ml-8'}`}>
+    <div class={`
+      relative p-6 rounded-2xl border-2 transition-all duration-500 ease-out
+      backdrop-blur-sm cursor-pointer group
+      ${typeColors[data.type]}
+      hover:scale-105 hover:shadow-2xl
+    `}>
+      <!-- Date Badge -->
+      <div class="absolute -top-3 left-6 px-3 py-1 bg-slate-900 rounded-full text-sm text-cyan-400 font-medium border border-slate-700">
+        {data.date.toLocaleDateString('de-DE', { 
+          year: 'numeric', 
+          month: 'long' 
+        })}
+      </div>
+      
+      <!-- Type Icon -->
+      <div class="text-2xl mb-3">{typeIcons[data.type]}</div>
+      
+      <!-- Title -->
+      <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+        {data.title}
+      </h3>
+      
+      <!-- Company/Location -->
+      {data.company && (
+        <p class="text-cyan-400 font-medium mb-1">{data.company}</p>
+      )}
+      {data.location && (
+        <p class="text-slate-400 text-sm mb-3">📍 {data.location}</p>
+      )}
+      
+      <!-- Description -->
+      <p class="text-slate-300 mb-4 leading-relaxed">
+        {data.description}
+      </p>
+      
+      <!-- Tags -->
+      {data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-4">
+          {data.tags.map(tag => (
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      
+      <!-- Links -->
+      <div class="flex gap-2">
+        {data.url && (
+          <a 
+            href={data.url} 
+            class="inline-flex items-center px-3 py-1 bg-cyan-600 hover:bg-cyan-500 text-white text-sm rounded-md transition-colors"
+          >
+            📖 Mehr lesen
+          </a>
+        )}
+        {data.externalUrl && (
+          <a 
+            href={data.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-flex items-center px-3 py-1 bg-slate-700 hover:bg-slate-600 text-white text-sm rounded-md transition-colors"
+          >
+            🔗 Link
+          </a>
+        )}
+      </div>
+      
+      <!-- Featured Badge -->
+      {data.featured && (
+        <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+          <span class="text-xs">⭐</span>
+        </div>
+      )}
+    </div>
+  </div>
+  
+  <!-- Timeline Line -->
+  <div class="timeline-line w-2/12 flex justify-center relative">
+    <div class="w-1 bg-gradient-to-b from-cyan-500 to-purple-500 relative">
+      <!-- Timeline Node -->
+      <div class={`
+        absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-2
+        ${typeColors[data.type].split(' ')[0]} bg-slate-950
+        group-hover:scale-125 transition-transform
+      `}></div>
+    </div>
+  </div>
+  
+  <!-- Empty space for alternating layout -->
+  <div class="w-5/12"></div>
+</div>
+
+<style>
+  .timeline-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .timeline-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timeline-item:hover .timeline-card {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-item {
+      flex-direction: column !important;
+    }
+    
+    .timeline-card {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    
+    .timeline-line {
+      width: 100% !important;
+      height: 2rem;
+    }
+    
+    .timeline-line .w-1 {
+      width: 2px;
+      height: 2rem;
+    }
+  }
+</style> 

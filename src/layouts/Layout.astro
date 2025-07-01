@@ -1,0 +1,66 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Robin Böhm - Full-Stack Developer & Tech Leader" } = Astro.props;
+
+// Import global styles
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+	</head>
+	<body class="font-sans antialiased bg-slate-950 text-white overflow-x-hidden">
+		<slot />
+		
+		<style>
+			html {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+			
+			/* Custom scrollbar */
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			
+			::-webkit-scrollbar-track {
+				background: #1e293b;
+			}
+			
+			::-webkit-scrollbar-thumb {
+				background: #64748b;
+				border-radius: 4px;
+			}
+			
+			::-webkit-scrollbar-thumb:hover {
+				background: #94a3b8;
+			}
+		</style>
+	</body>
+</html> 
