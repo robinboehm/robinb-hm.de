@@ -11,7 +11,7 @@ const blogEntries = await getCollection('blog');
 const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0, 3);
 ---
 
-<Layout title="Robin Böhm - Community Architect & Tech Visionary">
+<Layout title="Robin Böhm - Technological Visionary & Community Architect">
   <Navigation />
   
   <!-- Hero Section with Enhanced Parallax -->
@@ -54,9 +54,14 @@ const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0
       <p class="text-xl md:text-2xl text-slate-300 mb-8 hero-subtitle">
         Community Architect & Tech Visionary
       </p>
-      <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto hero-description">
-        Ich entwickle innovative Web-Lösungen, führe Teams und trage zur Open Source Community bei. 
-        Entdecken Sie meine Journey durch die Welt der modernen Technologien.
+      <p class="text-lg text-slate-400 mb-10 max-w-3xl mx-auto hero-description">
+        Robin Böhm schrieb 2013 das erste deutsche Angular-Buch, 
+        als das Framework noch in den Kinderschuhen steckte, 
+        und baute daraus Europas größte JavaScript-Entwickler-Community mit über 50.000 monatlichen Besuchern auf. 
+        Mit seinen Unternehmen Symetics GmbH (workshops.de)
+        und Coding Bootcamps Europe verbindet er technologische Voraussicht mit empathischer Führung 
+        – er erkennt Tech-Trends Jahre vor dem Mainstream und schafft gleichzeitig inklusive Lernräume, 
+        wo Diversität nicht nur Lippenbekenntnis ist, sondern Grundpfeiler des Geschäftsmodells.
       </p>
       
       <!-- Call to Action Buttons -->
@@ -65,7 +70,7 @@ const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0
           href="#timeline" 
           class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-cyan-500/25"
         >
-          🚀 Meine Journey entdecken
+          🚀 Ausgewählte Projekte und Meilensteine
         </a>
         <a 
           href="#contact" 
@@ -95,7 +100,7 @@ const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0
     <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-          Über <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">mich</span>
+          Technological Visionary & <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Community Architect</span>
         </h2>
       </div>
       
@@ -104,32 +109,33 @@ const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0
         <div class="space-y-6 about-text">
           <div class="prose prose-lg prose-invert">
             <p class="text-slate-300 leading-relaxed">
-              Als leidenschaftlicher <strong class="text-cyan-400">Full-Stack Developer</strong> mit über 8 Jahren Erfahrung 
-              habe ich zahlreiche innovative Projekte von der Konzeption bis zur Produktivsetzung begleitet.
+              Als <strong class="text-cyan-400">Tech Visionary</strong> mit außergewöhnlicher technologischer Weitsicht 
+              identifiziere ich Technologien konsistent <strong class="text-purple-400">2-3 Jahre vor der Mainstream-Adoption</strong>.
             </p>
             <p class="text-slate-300 leading-relaxed">
-              Meine Expertise umfasst moderne <strong class="text-purple-400">Web Technologies</strong> wie React, TypeScript, 
-              Node.js und Cloud-Infrastrukturen. Als <strong class="text-blue-400">Tech Leader</strong> liegt mir die 
-              Entwicklung von Teams und die Förderung einer starken Engineering-Kultur am Herzen.
+              <strong class="text-blue-400">2013 schrieb ich Deutschlands erstes Angular-Buch</strong> und baute daraus 
+              Europas größte JavaScript-Community mit <strong class="text-green-400">50.000 monatlichen Besuchern</strong> 
+              und über 10.000 aktiven Entwicklern auf.
             </p>
             <p class="text-slate-300 leading-relaxed">
-              Durch meine Beiträge zu <strong class="text-green-400">Open Source Projekten</strong> und als Speaker 
-              auf Konferenzen teile ich mein Wissen gerne mit der Community.
+              Als Gründer von <strong class="text-orange-400">workshops.de (staatlich zertifiziert)</strong> und 
+              <strong class="text-pink-400">Coding Bootcamps Europe</strong> verbinde ich empathische Führung mit 
+              Diversität-fokussierter Tech-Bildung für eine inklusivere Zukunft.
             </p>
           </div>
           
           <!-- Skills -->
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-white">Kernkompetenzen</h3>
+            <h3 class="text-xl font-semibold text-white">Technologie-Expertise</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">React</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Angular Pionier</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">React/Vue.js</span>
               <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">TypeScript</span>
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Node.js</span>
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Python</span>
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">AWS</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">NestJS</span>
               <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Docker</span>
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">GraphQL</span>
-              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">PostgreSQL</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Google Cloud</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">AI Integration</span>
+              <span class="px-3 py-1 bg-slate-800 text-cyan-400 text-sm rounded-md border border-slate-700">Remote-First</span>
             </div>
           </div>
         </div>
@@ -137,21 +143,33 @@ const featuredBlogPosts = blogEntries.filter(post => post.data.featured).slice(0
         <!-- Stats with Parallax -->
         <div class="about-stats grid grid-cols-2 gap-6">
           <div class="text-center p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
-            <div class="text-3xl font-bold text-cyan-400 mb-2">8+</div>
-            <div class="text-slate-300">Jahre Erfahrung</div>
+            <div class="text-3xl font-bold text-cyan-400 mb-2">50k</div>
+            <div class="text-slate-300">Monatliche Besucher Angular.DE</div>
           </div>
           <div class="text-center p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-            <div class="text-3xl font-bold text-purple-400 mb-2">50+</div>
-            <div class="text-slate-300">Projekte</div>
+            <div class="text-3xl font-bold text-purple-400 mb-2">5000+</div>
+            <div class="text-slate-300">Ausgebildete Entwickler</div>
           </div>
           <div class="text-center p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-            <div class="text-3xl font-bold text-blue-400 mb-2">10+</div>
-            <div class="text-slate-300">Konferenz-Talks</div>
+            <div class="text-3xl font-bold text-blue-400 mb-2">1200+</div>
+            <div class="text-slate-300">Unternehmenskunden</div>
           </div>
           <div class="text-center p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20">
-            <div class="text-3xl font-bold text-green-400 mb-2">100k+</div>
-            <div class="text-slate-300">GitHub Stars</div>
+            <div class="text-3xl font-bold text-green-400 mb-2">169</div>
+            <div class="text-slate-300">GitHub Repositories</div>
           </div>
+        </div>
+      </div>
+      
+      <!-- Mission Statement -->
+      <div class="mt-16 text-center">
+        <div class="max-w-4xl mx-auto p-8 bg-slate-800/50 rounded-3xl border border-slate-700">
+          <blockquote class="text-xl text-slate-300 italic leading-relaxed">
+            "In Berlin ansässig, widme ich mich dem Aufbau inklusiver Communities, 
+            wo Technologie dem menschlichen Potenzial dient. Remote-First Pioneer und Diversitäts-Verfechter, 
+            der derzeit KI-Integration erforscht, um Geschäftsprozesse zu vereinfachen."
+          </blockquote>
+          <div class="mt-4 text-cyan-400 font-medium">— Technological innovation and social impact are mutually reinforcing</div>
         </div>
       </div>
     </div>
