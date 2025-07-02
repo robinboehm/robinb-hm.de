@@ -7,9 +7,29 @@ const sortedEntries = timelineEntries.sort((a, b) =>
 );
 ---
 
-<section id="timeline" class="relative min-h-screen py-20 bg-slate-950">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+<section id="timeline" class="relative min-h-screen py-20 bg-slate-950 overflow-hidden">
+  <!-- Parallax Background Elements -->
+  <div class="absolute inset-0">
+    <!-- Moving Background Shapes -->
+    <div class="parallax-bg-1 absolute w-72 h-72 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="parallax-bg-2 absolute w-96 h-96 bg-gradient-to-r from-purple-500/8 to-pink-500/8 rounded-full blur-3xl"></div>
+    <div class="parallax-bg-3 absolute w-64 h-64 bg-gradient-to-r from-blue-500/12 to-cyan-500/12 rounded-full blur-3xl"></div>
+    <div class="parallax-bg-4 absolute w-80 h-80 bg-gradient-to-r from-indigo-500/6 to-purple-500/6 rounded-full blur-3xl"></div>
+    
+    <!-- Floating Particles -->
+    <div class="parallax-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+    </div>
+  </div>
+
+  <!-- Content with Parallax -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 parallax-content">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
         Meine <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Journey</span>
       </h2>
@@ -20,15 +40,15 @@ const sortedEntries = timelineEntries.sort((a, b) =>
 
     <div class="space-y-8">
       {sortedEntries.map((entry, index) => (
-        <div class="flex items-start space-x-4 group">
-          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+        <div class="timeline-item flex items-start space-x-4 group" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg timeline-number">
             <span class="text-white font-bold">{index + 1}</span>
           </div>
           
-          <div class="flex-grow bg-slate-900 rounded-lg p-6 border border-slate-800 hover:border-cyan-500 transition-all duration-300">
+          <div class="timeline-card flex-grow bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-800 hover:border-cyan-500 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-xl font-bold text-white mb-2">{entry.data.title}</h3>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">{entry.data.title}</h3>
                 {entry.data.company && (
                   <p class="text-cyan-400 font-medium">{entry.data.company}</p>
                 )}
@@ -41,26 +61,26 @@ const sortedEntries = timelineEntries.sort((a, b) =>
               </span>
             </div>
             
-            <p class="text-slate-300 mb-4">{entry.data.description}</p>
+            <p class="text-slate-300 mb-4 leading-relaxed">{entry.data.description}</p>
             
             <div class="flex flex-wrap gap-2 mb-4">
               {entry.data.tags.map(tag => (
-                <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded">
+                <span class="px-3 py-1 bg-slate-800/80 text-slate-300 text-xs rounded-full border border-slate-700 hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300">
                   {tag}
                 </span>
               ))}
             </div>
             
             {(entry.data.url || entry.data.externalUrl) && (
-              <div class="flex gap-2">
+              <div class="flex gap-3">
                 {entry.data.url && (
-                  <a href={entry.data.url} class="text-cyan-400 hover:text-cyan-300 text-sm">
-                    Mehr lesen →
+                  <a href={entry.data.url} class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-sm rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    📖 Mehr lesen
                   </a>
                 )}
                 {entry.data.externalUrl && (
-                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 text-sm">
-                    Externer Link →
+                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    🔗 Extern
                   </a>
                 )}
               </div>
@@ -70,4 +90,302 @@ const sortedEntries = timelineEntries.sort((a, b) =>
       ))}
     </div>
   </div>
-</section> 
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Enhanced Parallax Scrolling
+    const parallaxElements = [
+      { element: '.parallax-bg-1', speed: 0.3, rotation: 0.02 },
+      { element: '.parallax-bg-2', speed: -0.2, rotation: -0.015 },
+      { element: '.parallax-bg-3', speed: 0.4, rotation: 0.025 },
+      { element: '.parallax-bg-4', speed: -0.15, rotation: -0.01 },
+    ];
+
+    const particles = document.querySelectorAll('.particle');
+    
+    const handleParallaxScroll = () => {
+      const scrolled = window.pageYOffset;
+      const timelineSection = document.querySelector('#timeline');
+      
+      if (!timelineSection) return;
+      
+      const rect = timelineSection.getBoundingClientRect();
+      const sectionTop = window.pageYOffset + rect.top;
+      const sectionHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      
+      // Only apply parallax when section is in view
+      if (rect.bottom >= 0 && rect.top <= windowHeight) {
+        const scrollProgress = (scrolled - sectionTop + windowHeight) / (sectionHeight + windowHeight);
+        
+        // Apply parallax to background elements
+        parallaxElements.forEach(({ element, speed, rotation }) => {
+          const el = document.querySelector(element) as HTMLElement;
+          if (el) {
+            const yPos = scrolled * speed;
+            const rotateZ = scrolled * rotation;
+            el.style.transform = `translate3d(0, ${yPos}px, 0) rotate(${rotateZ}deg)`;
+          }
+        });
+        
+        // Animate particles
+        particles.forEach((particle, index) => {
+          const htmlParticle = particle as HTMLElement;
+          const speed = 0.1 + (index * 0.05);
+          const xOffset = Math.sin(scrolled * 0.001 + index) * 50;
+          const yOffset = scrolled * speed;
+          htmlParticle.style.transform = `translate3d(${xOffset}px, ${yOffset}px, 0)`;
+        });
+        
+        // Parallax for timeline items
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+          const htmlItem = item as HTMLElement;
+          const itemRect = htmlItem.getBoundingClientRect();
+          
+          if (itemRect.top < windowHeight && itemRect.bottom > 0) {
+            const itemProgress = (windowHeight - itemRect.top) / windowHeight;
+            const parallaxY = itemProgress * 30 * (index % 2 === 0 ? 1 : -1);
+            htmlItem.style.transform = `translateY(${parallaxY}px)`;
+            
+            // Scale effect based on scroll position
+            const scale = 0.95 + (itemProgress * 0.05);
+            const card = htmlItem.querySelector('.timeline-card') as HTMLElement;
+            if (card) {
+              card.style.transform = `scale(${Math.min(scale, 1)})`;
+            }
+          }
+        });
+      }
+    };
+
+    // Smooth scrolling with requestAnimationFrame
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleParallaxScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+    
+    // Initial call
+    handleParallaxScroll();
+
+    // Enhanced hover effects
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    timelineCards.forEach(card => {
+      const htmlCard = card as HTMLElement;
+      
+      card.addEventListener('mouseenter', () => {
+        htmlCard.style.transform = 'scale(1.03) translateY(-5px)';
+        htmlCard.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(34, 211, 238, 0.3)';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        htmlCard.style.transform = 'scale(1) translateY(0)';
+        htmlCard.style.boxShadow = '';
+      });
+    });
+
+    // Timeline numbers animation
+    const observerOptions = {
+      threshold: 0.6,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const numberEl = entry.target.querySelector('.timeline-number') as HTMLElement;
+          if (numberEl) {
+            numberEl.style.transform = 'scale(1.2)';
+            numberEl.style.boxShadow = '0 0 20px rgba(34, 211, 238, 0.6)';
+            
+            setTimeout(() => {
+              numberEl.style.transform = 'scale(1)';
+              numberEl.style.boxShadow = '0 0 10px rgba(34, 211, 238, 0.3)';
+            }, 300);
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      timelineObserver.observe(item);
+    });
+  });
+</script>
+
+<style>
+  /* Parallax Background Positioning */
+  .parallax-bg-1 {
+    top: 10%;
+    left: -10%;
+    animation: float 25s ease-in-out infinite;
+  }
+  
+  .parallax-bg-2 {
+    top: 30%;
+    right: -15%;
+    animation: float 30s ease-in-out infinite reverse;
+    animation-delay: -10s;
+  }
+  
+  .parallax-bg-3 {
+    bottom: 20%;
+    left: 20%;
+    animation: float 20s ease-in-out infinite;
+    animation-delay: -5s;
+  }
+  
+  .parallax-bg-4 {
+    top: 60%;
+    right: 30%;
+    animation: float 35s ease-in-out infinite reverse;
+    animation-delay: -15s;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg) scale(1);
+    }
+    33% {
+      transform: translateY(-30px) rotate(5deg) scale(1.05);
+    }
+    66% {
+      transform: translateY(15px) rotate(-3deg) scale(0.95);
+    }
+  }
+
+  /* Particles */
+  .parallax-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899);
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: particleFloat 15s ease-in-out infinite;
+  }
+
+  .particle-1 {
+    width: 4px;
+    height: 4px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .particle-2 {
+    width: 6px;
+    height: 6px;
+    top: 40%;
+    right: 20%;
+    animation-delay: -3s;
+  }
+
+  .particle-3 {
+    width: 3px;
+    height: 3px;
+    top: 60%;
+    left: 30%;
+    animation-delay: -6s;
+  }
+
+  .particle-4 {
+    width: 5px;
+    height: 5px;
+    top: 80%;
+    right: 40%;
+    animation-delay: -9s;
+  }
+
+  .particle-5 {
+    width: 4px;
+    height: 4px;
+    top: 25%;
+    left: 60%;
+    animation-delay: -12s;
+  }
+
+  .particle-6 {
+    width: 7px;
+    height: 7px;
+    top: 70%;
+    left: 80%;
+    animation-delay: -2s;
+  }
+
+  @keyframes particleFloat {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+      opacity: 0.1;
+    }
+    25% {
+      transform: translateY(-100px) translateX(50px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-50px) translateX(-30px);
+      opacity: 0.2;
+    }
+    75% {
+      transform: translateY(-150px) translateX(20px);
+      opacity: 0.4;
+    }
+  }
+
+  /* Timeline Items */
+  .timeline-item {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .timeline-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, box-shadow;
+    backdrop-filter: blur(10px);
+  }
+
+  .timeline-number {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, box-shadow;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .parallax-bg-1,
+    .parallax-bg-2,
+    .parallax-bg-3,
+    .parallax-bg-4 {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    
+    .particle {
+      display: none;
+    }
+  }
+
+  /* Performance optimizations */
+  .parallax-bg-1,
+  .parallax-bg-2,
+  .parallax-bg-3,
+  .parallax-bg-4,
+  .particle {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+</style> 

@@ -1,3 +1,4 @@
+---
 import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
@@ -26,6 +27,7 @@ const typeColors = {
 };
 
 const isLeft = index % 2 === 0;
+---
 
 <div 
   class={`timeline-item flex items-center mb-16 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}

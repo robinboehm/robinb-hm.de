@@ -1,43 +1,31 @@
 ---
-date: 2019-08-01
-title: "Software Engineering Intern"
-description: "Praktikum bei Google als Software Engineering Intern im Chrome Team. Arbeit an Performance-Optimierungen für die V8 JavaScript Engine."
+date: 2016-01-01
+title: "Web Developer - bee42 solutions gmbh"
+description: "Entwicklung von Monitoring-Systemen und ersten praktischen Erfahrungen mit Docker und Containerisierung."
 type: "work"
-company: "Google"
-location: "Mountain View, CA, USA"
-externalUrl: "https://careers.google.com"
-featured: true
-tags: ["Internship", "Google", "V8", "Performance", "JavaScript"]
+company: "bee42 solutions gmbh"
+location: "Deutschland"
+featured: false
+tags: ["Docker", "Monitoring", "Web Development", "DevOps"]
 ---
 
-# Software Engineering Intern - Google
+# Web Developer - bee42 solutions gmbh
 
-Dreimonatiges Praktikum im Chrome Team bei Google in Mountain View, wo ich an kritischen Performance-Optimierungen für die V8 JavaScript Engine arbeiten durfte.
+Bei bee42 solutions sammelte ich wichtige praktische Erfahrungen in der Webentwicklung und machte erste Schritte in der Welt der Containerisierung mit Docker.
 
-## Projekt: V8 Performance Optimization
+## Hauptprojekt
+- **Monitoring System**: Entwicklung eines umfassenden Monitoring-Systems
+- **Docker Integration**: Erste praktische Erfahrungen mit Containerisierung
+- **Web-Technologien**: Vertiefung von JavaScript und modernen Web-Frameworks
 
-### Aufgabe
-Optimierung der Garbage Collection Performance in V8 für große JavaScript-Anwendungen, mit Fokus auf Single Page Applications.
+## Kenntnisse erworben
+- **Containerisierung**: Docker, Container-Orchestrierung
+- **Monitoring**: System-Überwachung und Performance-Analyse
+- **DevOps Praktiken**: CI/CD, Deployment-Strategien
+- **Web Development**: Moderne JavaScript-Frameworks
 
-### Implementierung
-- **Profiling**: Entwicklung neuer Metriken für GC-Performance-Analyse
-- **Algorithm Design**: Implementierung eines adaptiven GC-Schedulers
-- **Testing**: Comprehensive Benchmarking mit realen Web-Apps
+## Impact
+Diese Position war entscheidend für die spätere Docker-Expertise, die ein Kernbestandteil der workshops.de-Kurse wurde. Die Erfahrungen mit Monitoring-Systemen prägten das Verständnis für Performance und Skalierbarkeit.
 
-### Ergebnisse
-- 15% Reduktion der GC-Latenz in großen SPAs
-- 8% Verbesserung der JavaScript-Execution-Performance
-- Code wurde in Chrome 77 produktiv ausgerollt
-
-## Team & Mentoring
-- Direktes Mentoring durch Senior Staff Engineer
-- Code Reviews mit Chrome Core Team
-- Präsentation vor 50+ Ingenieuren bei Google
-
-## Learning Experience
-- **Systems Programming**: Low-level C++ Optimierungen
-- **Performance Engineering**: Profiling und Benchmarking auf Enterprise-Level
-- **Large Scale Development**: Contribution zu einer Codebase mit Millionen LOC
-- **Team Collaboration**: Agile Development in einem globalen Team
-
-Diese Erfahrung prägte maßgeblich mein Verständnis für High-Performance Web Technologies. 
+## Vorbereitung für die Zukunft
+Die hier gesammelten Erfahrungen bildeten die Grundlage für die späteren Unternehmertätigkeiten und die Spezialisierung auf moderne Web-Technologien. 

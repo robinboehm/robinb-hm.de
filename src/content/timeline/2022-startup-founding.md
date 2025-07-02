@@ -1,35 +1,37 @@
 ---
-date: 2022-03-01
-title: "Co-Founder & CTO - DevTools Startup"
-description: "Mitgründung eines Startups für Developer Tools mit Fokus auf automatisierte Code-Qualität und Performance-Monitoring."
+date: 2017-01-01
+title: "Co-Founder & CEO - workshops.de"
+description: "Gründung von workshops.de - Europas führende Plattform für Web-Technologie-Schulungen mit 26 professionellen Trainern."
 type: "project"
-company: "CodeMetrics GmbH"
-location: "München, Deutschland"
+company: "workshops.de"
+location: "Berlin, Deutschland"
 url: "/blog/startup-journey"
 featured: true
-tags: ["Startup", "CTO", "DevTools", "Entrepreneurship"]
+tags: ["Startup", "CEO", "Education", "Angular", "React"]
 ---
 
-# Co-Founder & CTO - CodeMetrics
+# Co-Founder & CEO - workshops.de
 
-Nach jahrelanger Erfahrung in der Softwareentwicklung wagte ich den Sprung in die Selbständigkeit und gründete zusammen mit zwei Partnern CodeMetrics - ein Startup für innovative Developer Tools.
+2017 gründete ich workshops.de mit der Vision, die beste Bildungsplattform für moderne Web-Technologien zu schaffen. Was als Idee begann, ist heute Europas führende Plattform für Entwickler-Schulungen.
 
-## Vision
-Entwicklung einer KI-gestützten Plattform für automatisierte Code-Qualitätsanalyse und Performance-Monitoring, die Entwicklerteams dabei hilft, besseren Code schneller zu schreiben.
+## Die Vision
+Entwicklung einer innovativen Lernplattform, die messbar bessere Lernerfolge erzielt durch eine einzigartige Kombination aus Theorie (30%), Praxis (50%) und persönlichem Mentoring (20%).
 
-## Rolle als CTO
-- **Technische Strategie**: Definition der Produktarchitektur und Technology Stack
-- **Team Building**: Aufbau eines 12-köpfigen Entwicklerteams
-- **Product Development**: Von der Idee zum MVP in 8 Monaten
-- **Fundraising**: Technische Due Diligence für Series A (€2.5M)
+## Rolle als CEO
+- **Strategische Führung**: Aufbau eines remote-first Teams mit 26 professionellen Trainern
+- **Product Development**: Entwicklung eines einzigartigen Lernsystems mit messbarem Erfolg
+- **Community Building**: Leitung der Angular.DE Community und Organisation der NG-DE Conference
+- **Business Development**: Über 1000 Workshops und 10.000 ausgebildete Entwickler
 
-## Technologie
-- **Backend**: Node.js, GraphQL, PostgreSQL, Redis
-- **Frontend**: React, TypeScript, Apollo Client
-- **Infrastructure**: Kubernetes, Docker, AWS
-- **AI/ML**: Python, TensorFlow, Code Analysis APIs
+## Technologie-Fokus
+- **Frontend**: Angular, React, Vue.js, TypeScript
+- **Backend**: NestJS, Node.js, Elixir
+- **Cloud & DevOps**: Docker, Google Cloud, TensorFlow
+- **Emerging Tech**: Web3, Rust, Go
 
 ## Erfolge
-- 500+ Beta-Kunden in den ersten 6 Monaten
-- Erfolgreiche Series A Finanzierungsrunde
-- Partnership mit drei führenden IDE-Herstellern 
+- 26 professionelle Trainer in ganz Europa
+- 95% Weiterempfehlungsrate
+- 50+ Unternehmenskunden
+- Deutschlands führende Angular-Konferenz (NG-DE)
+- Remote-first Unternehmenskultur seit 2017 

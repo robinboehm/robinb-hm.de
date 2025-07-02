@@ -1,36 +1,45 @@
 ---
-date: 2021-06-15
-title: "Core Contributor - React Testing Library"
-description: "Beitrag zur React Testing Library als Core Contributor mit Fokus auf Performance-Optimierungen und neue Testing-Patterns."
+date: 2018-01-01
+title: "Gründer - Angular.DE Community"
+description: "Aufbau der größten deutschen Angular-Community mit wöchentlichen Meetups, Tutorials und der NG-DE Conference."
 type: "project"
-externalUrl: "https://github.com/testing-library/react-testing-library"
-featured: false
-tags: ["Open Source", "React", "Testing", "JavaScript"]
+externalUrl: "https://angular.de"
+featured: true
+tags: ["Community", "Angular", "Open Source", "Conference"]
 ---
 
-# Core Contributor - React Testing Library
+# Gründer - Angular.DE Community
 
-Mein Engagement in der Open Source Community führte mich zur React Testing Library, wo ich als Core Contributor maßgeblich zur Weiterentwicklung der Bibliothek beitrug.
+Als Angular 2 veröffentlicht wurde, erkannte ich das Potenzial dieser revolutionären Technologie. Gleichzeitig sah ich einen Mangel an deutschsprachigen Ressourcen und Community-Support. So entstand Angular.DE - heute die größte deutsche Angular-Community.
 
-## Contributions
+## Community Building
 
-### Performance Optimierungen
-- Reduktion der Bundle-Größe um 30% durch Tree-Shaking-Optimierungen
-- Implementierung von Lazy Loading für testing utilities
-- Memory Leak Fixes in Event-Handling
+### Meetups & Events
+- **Wöchentliche Meetups** in Berlin, München, Hamburg
+- **200+ Teilnehmer** bei größeren Events
+- **Expert Talks** von Angular Core Team Mitgliedern
+- **Hands-on Workshops** für alle Skill-Level
 
-### Neue Features
-- **Async Utilities**: Entwicklung von `waitForElementToBeRemoved`
-- **Custom Hooks Testing**: Vereinfachung von Hook-Tests
-- **Accessibility Testing**: Integration von axe-core für a11y-Tests
+### Content Creation
+- **Angular.DE Blog** mit hunderten von Tutorials
+- **Deutsche Angular-Bücher** als Autor
+- **Video-Tutorials** und Online-Kurse
+- **Newsletter** mit 5.000+ Abonnenten
 
-### Community Impact
-- 50+ merged Pull Requests
-- 200+ Issues bearbeitet und gelöst
-- Mentoring von 20+ neuen Contributors
-- Workshops auf 5 internationalen Konferenzen
+### NG-DE Conference
+- **Gründung und Organisation** von Deutschlands führender Angular-Konferenz
+- **500+ internationale Teilnehmer** jährlich
+- **Angular Core Team** als Keynote-Speaker
+- **3-tägiges Event** mit Workshops und Talks
 
-## Recognition
-- GitHub Star Contributor Award 2021
-- Featured in React Newsletter (100k+ Subscribers)
-- Invited as Technical Reviewer für "React Testing Strategies" (O'Reilly) 
+## Impact & Recognition
+- **Deutschlands größte Angular-Community** mit 10.000+ Mitgliedern
+- **Speaker** auf 15+ internationalen Konferenzen
+- **Technical Reviewer** für Angular-Publikationen
+- **Mentor** für neue Community-Organisatoren
+
+## Open Source Contributions
+- Beiträge zu Angular-Ökosystem-Projekten
+- Entwicklung von Angular-Tools und -Bibliotheken
+- Code-Reviews und Issue-Management
+- Mentoring von neuen Contributors 
