@@ -155,5 +155,3 @@ Mit charakteristischem Fokus auf praktische Anwendung und menschlichen Nutzen st
 - 🌐 [workshops.de](https://workshops.de) für professionelle Weiterbildung
 - 🚀 [Coding Bootcamps Europe](https://codingbootcamps.eu) für Career Changes
 - 🔗 [LinkedIn](https://linkedin.com/in/robinboehm) für Updates und Insights
-
-*Was ist euer größter Tech-Leadership-Challenge? Wie könnte empathischere Führung euer Team voranbringen?* 
